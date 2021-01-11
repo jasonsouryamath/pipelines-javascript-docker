@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jasonsouryamathpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jasonsouryamathpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: jasonsouryamathpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jasonsouryamathpipelinesjavascriptdocker 
+          image: devtestcc.azurecr.io/jasonsouryamathpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
